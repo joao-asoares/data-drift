@@ -8,14 +8,18 @@ Resumo da Análise
 
 1. Está entrando na condição de retreinamento?  
    SIM
-   A métrica Page Hinkley atingiu 2.2099 na iteração 819
+   Mudança detectada na iteração 201, Page Hinkley = 2.284849009799091
+   Mudança detectada na iteração 435, Page Hinkley = 2.0386160742999544
+   Mudança detectada na iteração 819, Page Hinkley = 2.254530640711381
+
    Isso ultrapassou o threshold configurado de 2.0
    O threshold é o limite definido no código: std_detector = detector(delta=delta, threshold=2)
    Parâmetros:
    Threshold: 2.0
    Delta: 0.1
-   Detecção: 1 vez na iteração 819
-   Taxa de erro professor-aluno: 8.82%
+   Número de detecções de drift: 3
+   Pontos de detecção: [201, 435, 819]  
+   Taxa de erro: 0.0893 (8.93%)
    Porque:
    O Page Hinkley monitora erros entre predições do professor vs aluno
    Quando a métrica ultrapassa threshold=2, detecta drift
